@@ -1,32 +1,20 @@
 pipeline {
+
     agent any
 
-    stages {
-        stage ('Compile Stage') {
-
+     stages {
+        stage('checkout') {
             steps {
-                withMaven(maven : 'maven_3_5_0') {
-                    sh 'mvn clean compile'
-                }
+
+                git 'https://github.com/kuslapur/jenkins-multibranch.git'
             }
         }
-
-        stage ('Testing Stage') {
-
+        stage('Build') {
             steps {
-                withMaven(maven : 'maven_3_5_0') {
-                    sh 'mvn test'
-                }
+                sh 'maven package'
             }
         }
-
-
-        stage ('Deployment Stage') {
-            steps {
-                withMaven(maven : 'maven_3_5_0') {
-                    sh 'mvn deploy'
-                }
-            }
-        }
+      
     }
 }
+
