@@ -1,5 +1,0 @@
-#surefire_0
-#Mon Dec 06 18:09:17 UTC 2021
-basedir=/home/ubuntu/jenkins-multibranch
-user.dir=/home/ubuntu/jenkins-multibranch
-localRepository=/home/ubuntu/.m2/repository
