@@ -12,6 +12,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo "hello world"
+		echo "only on branch commit"
             }
         }
       
