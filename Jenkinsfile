@@ -11,7 +11,7 @@ pipeline {
         }
         stage('Build') {
             steps {
-                sh 'maven package'
+                echo 'Hello world'
             }
         }
       
