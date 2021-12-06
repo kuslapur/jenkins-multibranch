@@ -3,7 +3,7 @@ pipeline {
     agent any
 
      stages {
-        stage('checkout') {
+        stage('checkout GIT') {
             steps {
 
                 git 'https://github.com/kuslapur/jenkins-multibranch.git'
