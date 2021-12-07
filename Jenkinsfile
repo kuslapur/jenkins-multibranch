@@ -11,6 +11,7 @@ pipeline {
         }
         stage('Build') {
             steps {
+		 sh 'mvn package'
                 echo "hello world"
 		echo "only on branch commit"
             }
