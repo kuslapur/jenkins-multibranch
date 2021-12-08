@@ -13,6 +13,7 @@ pipeline {
             steps {
                 echo "hello world"
 		echo "only on branch commit"
+		echo "hot fix branch testing in other branch"
             }
         }
       
